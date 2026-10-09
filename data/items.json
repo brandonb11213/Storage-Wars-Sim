@@ -1,0 +1,482 @@
+[
+  {
+    "id": "camp_mug",
+    "name": "Enamel camp mug",
+    "category": "Kitchen",
+    "value": 12,
+    "rarity": 0,
+    "shape": "small"
+  },
+  {
+    "id": "desk_lamp",
+    "name": "Desk lamp",
+    "category": "Lighting",
+    "value": 22,
+    "rarity": 0,
+    "shape": "lamp"
+  },
+  {
+    "id": "wood_stool",
+    "name": "Wooden stool",
+    "category": "Furniture",
+    "value": 25,
+    "rarity": 0,
+    "shape": "stool"
+  },
+  {
+    "id": "paperbacks",
+    "name": "Paperback bundle",
+    "category": "Books",
+    "value": 15,
+    "rarity": 0,
+    "shape": "books"
+  },
+  {
+    "id": "hand_tools",
+    "name": "Hand tool kit",
+    "category": "Tools",
+    "value": 30,
+    "rarity": 0,
+    "shape": "small"
+  },
+  {
+    "id": "picnic_basket",
+    "name": "Picnic basket",
+    "category": "Home",
+    "value": 18,
+    "rarity": 0,
+    "shape": "small"
+  },
+  {
+    "id": "alarm_clock",
+    "name": "Alarm clock",
+    "category": "Electronics",
+    "value": 20,
+    "rarity": 0,
+    "shape": "small"
+  },
+  {
+    "id": "plant_pot",
+    "name": "Ceramic planter",
+    "category": "Garden",
+    "value": 16,
+    "rarity": 0,
+    "shape": "small"
+  },
+  {
+    "id": "skateboard",
+    "name": "Scuffed skateboard",
+    "category": "Sport",
+    "value": 28,
+    "rarity": 0,
+    "shape": "long"
+  },
+  {
+    "id": "board_game",
+    "name": "Board game",
+    "category": "Games",
+    "value": 19,
+    "rarity": 0,
+    "shape": "small"
+  },
+  {
+    "id": "denim_jacket",
+    "name": "Denim jacket",
+    "category": "Clothing",
+    "value": 24,
+    "rarity": 0,
+    "shape": "small"
+  },
+  {
+    "id": "mixing_bowl",
+    "name": "Mixing bowl",
+    "category": "Kitchen",
+    "value": 14,
+    "rarity": 0,
+    "shape": "small"
+  },
+  {
+    "id": "picture_frame",
+    "name": "Oak picture frame",
+    "category": "Art",
+    "value": 13,
+    "rarity": 0,
+    "shape": "small"
+  },
+  {
+    "id": "vinyl_bundle",
+    "name": "Vinyl bundle",
+    "category": "Music",
+    "value": 27,
+    "rarity": 0,
+    "shape": "records"
+  },
+  {
+    "id": "toy_truck",
+    "name": "Tin toy truck",
+    "category": "Toys",
+    "value": 21,
+    "rarity": 0,
+    "shape": "small"
+  },
+  {
+    "id": "garden_spade",
+    "name": "Garden spade",
+    "category": "Garden",
+    "value": 17,
+    "rarity": 0,
+    "shape": "long"
+  },
+  {
+    "id": "coffee_grinder",
+    "name": "Coffee grinder",
+    "category": "Kitchen",
+    "value": 48,
+    "rarity": 1,
+    "shape": "small"
+  },
+  {
+    "id": "record_player",
+    "name": "Record player",
+    "category": "Music",
+    "value": 65,
+    "rarity": 1,
+    "shape": "records"
+  },
+  {
+    "id": "sewing_machine",
+    "name": "Sewing machine",
+    "category": "Tools",
+    "value": 72,
+    "rarity": 1,
+    "shape": "small"
+  },
+  {
+    "id": "copper_pan",
+    "name": "Copper saucepan",
+    "category": "Kitchen",
+    "value": 42,
+    "rarity": 1,
+    "shape": "small"
+  },
+  {
+    "id": "side_table",
+    "name": "Midcentury side table",
+    "category": "Furniture",
+    "value": 60,
+    "rarity": 1,
+    "shape": "stool"
+  },
+  {
+    "id": "binoculars",
+    "name": "Birding binoculars",
+    "category": "Optics",
+    "value": 55,
+    "rarity": 1,
+    "shape": "small"
+  },
+  {
+    "id": "typewriter",
+    "name": "Portable typewriter",
+    "category": "Office",
+    "value": 75,
+    "rarity": 1,
+    "shape": "small"
+  },
+  {
+    "id": "camera",
+    "name": "Film camera",
+    "category": "Photography",
+    "value": 70,
+    "rarity": 1,
+    "shape": "small"
+  },
+  {
+    "id": "ukulele",
+    "name": "Travel ukulele",
+    "category": "Music",
+    "value": 50,
+    "rarity": 1,
+    "shape": "long"
+  },
+  {
+    "id": "snow_globe",
+    "name": "Harbor snow globe",
+    "category": "Collectibles",
+    "value": 38,
+    "rarity": 1,
+    "shape": "small"
+  },
+  {
+    "id": "tool_chest",
+    "name": "Steel tool chest",
+    "category": "Tools",
+    "value": 68,
+    "rarity": 1,
+    "shape": "small"
+  },
+  {
+    "id": "chess_set",
+    "name": "Carved chess set",
+    "category": "Games",
+    "value": 46,
+    "rarity": 1,
+    "shape": "small"
+  },
+  {
+    "id": "leather_bag",
+    "name": "Leather satchel",
+    "category": "Clothing",
+    "value": 58,
+    "rarity": 1,
+    "shape": "small"
+  },
+  {
+    "id": "guitar_amp",
+    "name": "Practice amplifier",
+    "category": "Music",
+    "value": 62,
+    "rarity": 1,
+    "shape": "small"
+  },
+  {
+    "id": "arcade_console",
+    "name": "Retro game console",
+    "category": "Games",
+    "value": 120,
+    "rarity": 2,
+    "shape": "small"
+  },
+  {
+    "id": "silver_teapot",
+    "name": "Silver teapot",
+    "category": "Kitchen",
+    "value": 185,
+    "rarity": 2,
+    "shape": "small"
+  },
+  {
+    "id": "divers_watch",
+    "name": "Divers watch",
+    "category": "Jewelry",
+    "value": 210,
+    "rarity": 2,
+    "shape": "small"
+  },
+  {
+    "id": "brass_telescope",
+    "name": "Brass telescope",
+    "category": "Optics",
+    "value": 165,
+    "rarity": 2,
+    "shape": "long"
+  },
+  {
+    "id": "studio_microphone",
+    "name": "Studio microphone",
+    "category": "Music",
+    "value": 135,
+    "rarity": 2,
+    "shape": "lamp"
+  },
+  {
+    "id": "art_print",
+    "name": "Signed art print",
+    "category": "Art",
+    "value": 155,
+    "rarity": 2,
+    "shape": "books"
+  },
+  {
+    "id": "vintage_radio",
+    "name": "Vintage radio",
+    "category": "Electronics",
+    "value": 110,
+    "rarity": 2,
+    "shape": "small"
+  },
+  {
+    "id": "porcelain_vase",
+    "name": "Porcelain vase",
+    "category": "Home",
+    "value": 140,
+    "rarity": 2,
+    "shape": "vase"
+  },
+  {
+    "id": "racing_bike",
+    "name": "Vintage racing bike",
+    "category": "Sport",
+    "value": 220,
+    "rarity": 2,
+    "shape": "long"
+  },
+  {
+    "id": "first_edition",
+    "name": "First edition novel",
+    "category": "Books",
+    "value": 175,
+    "rarity": 2,
+    "shape": "books"
+  },
+  {
+    "id": "electric_guitar",
+    "name": "Sunburst electric guitar",
+    "category": "Music",
+    "value": 340,
+    "rarity": 3,
+    "shape": "long"
+  },
+  {
+    "id": "antique_globe",
+    "name": "Antique globe",
+    "category": "Collectibles",
+    "value": 300,
+    "rarity": 3,
+    "shape": "vase"
+  },
+  {
+    "id": "marble_bust",
+    "name": "Marble explorer bust",
+    "category": "Art",
+    "value": 420,
+    "rarity": 3,
+    "shape": "vase"
+  },
+  {
+    "id": "jukebox",
+    "name": "Mini jukebox",
+    "category": "Music",
+    "value": 450,
+    "rarity": 3,
+    "shape": "small"
+  },
+  {
+    "id": "gold_pendant",
+    "name": "Gold compass pendant",
+    "category": "Jewelry",
+    "value": 380,
+    "rarity": 3,
+    "shape": "small"
+  },
+  {
+    "id": "designer_chair",
+    "name": "Sculpted lounge chair",
+    "category": "Furniture",
+    "value": 410,
+    "rarity": 3,
+    "shape": "stool"
+  },
+  {
+    "id": "mechanical_clock",
+    "name": "Mechanical mantel clock",
+    "category": "Home",
+    "value": 360,
+    "rarity": 3,
+    "shape": "small"
+  },
+  {
+    "id": "rare_comic",
+    "name": "Golden-era comic",
+    "category": "Books",
+    "value": 325,
+    "rarity": 3,
+    "shape": "books"
+  },
+  {
+    "id": "master_violin",
+    "name": "Master-crafted violin",
+    "category": "Music",
+    "value": 950,
+    "rarity": 4,
+    "shape": "long"
+  },
+  {
+    "id": "ruby_ring",
+    "name": "Ruby ring",
+    "category": "Jewelry",
+    "value": 1100,
+    "rarity": 4,
+    "shape": "small"
+  },
+  {
+    "id": "museum_vase",
+    "name": "Imperial ceramic vase",
+    "category": "Art",
+    "value": 880,
+    "rarity": 4,
+    "shape": "vase"
+  },
+  {
+    "id": "space_patch",
+    "name": "Flown mission patch",
+    "category": "Collectibles",
+    "value": 760,
+    "rarity": 4,
+    "shape": "small"
+  },
+  {
+    "id": "gold_coin",
+    "name": "Historic gold coin",
+    "category": "Collectibles",
+    "value": 1200,
+    "rarity": 4,
+    "shape": "small"
+  },
+  {
+    "id": "racing_trophy",
+    "name": "Grand prix trophy",
+    "category": "Sport",
+    "value": 680,
+    "rarity": 4,
+    "shape": "vase"
+  },
+  {
+    "id": "prototype_camera",
+    "name": "Prototype film camera",
+    "category": "Photography",
+    "value": 1050,
+    "rarity": 4,
+    "shape": "small"
+  },
+  {
+    "id": "celestial_map",
+    "name": "Celestial expedition map",
+    "category": "Art",
+    "value": 2800,
+    "rarity": 5,
+    "shape": "books"
+  },
+  {
+    "id": "royal_chronometer",
+    "name": "Royal marine chronometer",
+    "category": "Collectibles",
+    "value": 3600,
+    "rarity": 5,
+    "shape": "small"
+  },
+  {
+    "id": "meteorite",
+    "name": "Crystalline meteorite",
+    "category": "Science",
+    "value": 2400,
+    "rarity": 5,
+    "shape": "vase"
+  },
+  {
+    "id": "lost_masterpiece",
+    "name": "Lost harbor masterpiece",
+    "category": "Art",
+    "value": 4800,
+    "rarity": 5,
+    "shape": "books"
+  },
+  {
+    "id": "diamond_brooch",
+    "name": "Starlight diamond brooch",
+    "category": "Jewelry",
+    "value": 5200,
+    "rarity": 5,
+    "shape": "small"
+  }
+]
