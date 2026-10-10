@@ -40,6 +40,8 @@ python3 -m http.server 8060 --bind 0.0.0.0 --directory build/web
 
 Serve the entire `build/web` folder and use its explicit `/index.html` path for offline caching; do not open `index.html` as a local file. Stop the server with Ctrl+C. `build/` and `test-results/` are ignored generated outputs. The static build needs no backend and supports cached offline play after its first successful online load. See [TESTING.md](TESTING.md) for validation results, browser regression testing, and free iPhone Safari testing instructions. No public deployment has been performed.
 
+For free HTTPS hosting, the [GitHub Pages guide](docs/GITHUB_PAGES.md) explains the included build/deployment workflow, repository settings, cross-origin isolation configuration, and the exact iPhone Safari entry path. Pull requests validate the export; `main` deploys after Pages is configured. The existing single-threaded export needs no COOP/COEP headers.
+
 For background cloud startup with HTTP readiness checks, run `bash tools/start_web.sh`. Logs and the server PID are stored under `/workspace/.runtime`. Use `STORAGE_WARS_PORT=8062` to choose another port when needed; preserve unrelated services. Only stop a background server after verifying its recorded PID belongs to the server you started.
 
 ## Architecture

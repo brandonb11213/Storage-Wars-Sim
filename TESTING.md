@@ -39,6 +39,8 @@ Generated screenshots and browser logs live in `test-results/`. Chromium uses so
 
 Recorded validation on October 9, 2026: the full `bash tools/check_browser.sh` run completed with exit code 0 and no runtime errors. It verified the auction/payment, six touch-picked reveals and collections, selected pawn sales, appraisal purchase, reload/Continue, cached offline startup, and landscape touch/pinch checks. The headless suite also covers recovery when auction-access upgrades raise opening bids above the initial funding threshold.
 
+Recorded hosting validation on October 10, 2026: the restored environment passed all **12,222 headless checks**, the release web export, complete-package/path checks, and `actionlint` 1.7.7 workflow validation. The full `bash tools/check_browser.sh --base-path /Storage-Wars-Sim` run exited 0 with no runtime errors: actual auction/payment, six touch-picked crates, collection/sales/upgrade, IndexedDB reload/Continue, cached offline reload, and 844×390 touch/pinch checks. It also confirmed the project-relative worker scope and startup without cross-origin isolation headers. The local Pages simulation returned the complete WASM file as `application/wasm`. GitHub-hosted CI/deployment and physical Safari remain unrun.
+
 ## Free iPhone Safari testing
 
 The Web preset uses Compatibility/WebGL 2, GDScript, **no threads**, and no extensions. It does not require SharedArrayBuffer or special cross-origin isolation headers. The shipped engine template requires Safari 15.2 or later; use a current iOS/Safari version for testing. It is a browser test build of the iOS-intended game, not a verified native iOS package.
@@ -49,12 +51,7 @@ Free local route, on a development computer reachable from the phone:
 2. Put the iPhone and computer on the same trusted Wi-Fi. Open the **computer's LAN address** with port `8060` and path `/index.html` in Safari. The phone's loopback address points to the phone, not the computer. Cloud loopback servers are not exposed by this onboarding UI.
 3. Rotate to landscape. Complete the loop below. Ordinary HTTP can test WebGL/input locally, but secure browser persistence/PWA features should be tested using HTTPS.
 
-Free static HTTPS route, when public hosting is appropriate:
-
-1. Copy **all** files from `build/web/` to a GitHub Pages publishing folder/branch in a public repository that supports free Pages. Alternatively deploy the same static folder to another provider's free static tier without enabling paid services.
-2. In GitHub repository settings, enable Pages for that folder/branch and wait for the deployment's reported URL. This project has not enabled or deployed Pages. Publishing is a separate action; generated source/build files alone do not publish a site.
-3. Open the provided HTTPS URL with `/index.html` appended on the iPhone. Keep the export's JS/WASM/PCK/icons/manifest/service worker together. `.wasm` must be served as `application/wasm` (Python and Pages handle it).
-4. After the first online load, reload once online so the service worker controls and caches all engine files, then optionally Add to Home Screen. Close/reopen and test Continue, then turn off networking and test cached startup and continued gameplay. Storage and cache can be evicted by Safari; private browsing and clearing site data can remove saves.
+Free static HTTPS route: follow the [GitHub Pages guide](docs/GITHUB_PAGES.md) to set Pages' source to **GitHub Actions**, merge the pull request, and use the deployment's reported URL with `/index.html`. The included workflow validates pull requests and deploys `main`. Pages on GitHub Free requires a public repository; do not buy an upgrade if a private repository is ineligible. This preparation does not enable Pages, change visibility, or publish a site. Keep all exported assets together; Pages supplies the correct WASM MIME type. Reload once online before testing offline startup, and test physical Safari separately.
 
 Manual acceptance checklist:
 

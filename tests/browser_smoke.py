@@ -3,6 +3,7 @@
 Uses OCR to click rendered buttons and reads browser saves to assert behavior.
 It never injects game state or calls a production debug API.
 """
+import argparse
 import csv
 import functools
 import http.server
@@ -15,6 +16,7 @@ import subprocess
 import sys
 import threading
 import time
+from urllib.parse import urlsplit
 
 from playwright.sync_api import sync_playwright
 from PIL import Image
@@ -40,6 +42,21 @@ READ_SAVE = """key => new Promise((resolve,reject) => {
 
 
 class QuietServer(http.server.SimpleHTTPRequestHandler):
+    def __init__(self, *args, base_path="", **kwargs):
+        self.base_path = base_path
+        super().__init__(*args, **kwargs)
+
+    def do_GET(self):
+        path = urlsplit(self.path)
+        if self.base_path:
+            if not path.path.startswith(self.base_path + "/"):
+                self.send_error(404)
+                return
+            self.path = path.path[len(self.base_path):]
+            if path.query:
+                self.path += "?" + path.query
+        super().do_GET()
+
     def log_message(self, *_args):
         pass
 
@@ -133,7 +150,14 @@ def click_primary(page, touch=False, scroll=False):
 
 
 def run():
-    handler = functools.partial(QuietServer, directory=str(ROOT / "build/web"))
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--platform-only", action="store_true")
+    parser.add_argument("--base-path", default="", help="Emulate a Pages project mount, e.g. /Storage-Wars-Sim")
+    options = parser.parse_args()
+    base_path = options.base_path.rstrip("/")
+    if base_path and not re.fullmatch(r"(?:/[A-Za-z0-9_-]+)+", base_path):
+        parser.error("--base-path must be a simple absolute directory path")
+    handler = functools.partial(QuietServer, directory=str(ROOT / "build/web"), base_path=base_path)
     server = http.server.ThreadingHTTPServer(("127.0.0.1", 0), handler)
     threading.Thread(target=server.serve_forever, daemon=True).start()
     errors = []
@@ -147,14 +171,19 @@ def run():
             page.on("pageerror", lambda error: errors.append(str(error)))
             page.on("console", lambda msg: messages.append(msg.text))
             origin = f"http://127.0.0.1:{server.server_port}"
-            page.goto(origin + "/index.html", wait_until="networkidle")
+            page.goto(origin + base_path + "/index.html", wait_until="networkidle")
             page.wait_for_timeout(2500)
             click_text(page, r"^New Game")
             state = wait_state(page, lambda s: s["cash"] == 500, "new game starts at $500")
             page.evaluate("navigator.serviceWorker.ready")
+            registration = page.evaluate("navigator.serviceWorker.ready.then(registration => ({scope: registration.scope, script: registration.active.scriptURL}))")
+            assert registration["scope"] == origin + base_path + "/", registration
+            assert registration["script"] == origin + base_path + "/index.service.worker.js", registration
+            assert not page.evaluate("crossOriginIsolated"), "This build must work without isolation headers"
             print("PASS browser: New Game renders and saves $500", flush=True)
+            print("PASS browser: project path and service worker scope", base_path or "/", flush=True)
             page.screenshot(path=str(OUT / "browser-facility.png"))
-            if "--platform-only" not in sys.argv:
+            if not options.platform_only:
                 click_primary(page)
                 wait_state(page, lambda s: s["auction"]["stage"] == "bidding", "auction enters bidding")
                 print("PASS browser: canvas auction entry", flush=True)
@@ -234,7 +263,7 @@ def run():
             assert page.screenshot() != before_image, "Pinch must visibly change camera framing"
             assert not errors, errors
             assert not any("SCRIPT ERROR:" in m or m.startswith("ERROR:") for m in messages), messages
-            scope = "offline cache, landscape touch UI and pinch input" if "--platform-only" in sys.argv else "desktop canvas loop, touch picks, reload persistence, offline cache, landscape touch UI and pinch input"
+            scope = "offline cache, landscape touch UI and pinch input" if options.platform_only else "desktop canvas loop, touch picks, reload persistence, offline cache, landscape touch UI and pinch input"
             (OUT / "browser.log").write_text("\n".join(messages) + "\nPASS: " + scope + ".\n")
             print("PASS browser: 844×390 landscape touch UI and pinch events; no runtime errors", flush=True)
             browser.close()
