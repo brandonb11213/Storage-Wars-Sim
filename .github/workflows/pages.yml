@@ -1,0 +1,65 @@
+name: Validate and deploy web game
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  STORAGE_WARS_RUNTIME: /tmp/storage-wars-runtime
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Cache pinned Godot and web templates
+        uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
+        with:
+          path: |
+            ${{ env.STORAGE_WARS_RUNTIME }}/godot
+            ${{ env.STORAGE_WARS_RUNTIME }}/data/godot/export_templates
+          key: godot-web-${{ runner.os }}-4.6.3-${{ hashFiles('tools/setup_env.sh') }}
+      - name: Install checksum-verified Godot and import project
+        run: bash tools/setup_env.sh
+      - name: Run game and scene checks
+        run: |
+          source tools/env.sh
+          bash tools/check.sh
+      - name: Export the single-threaded web game
+        run: bash tools/export_web.sh
+      - name: Validate the Pages package
+        run: |
+          python3 tests/validate_web_export.py build/web
+          touch build/web/.nojekyll
+      - name: Upload static Pages files
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
+        with:
+          path: build/web
+          retention-days: 1
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
