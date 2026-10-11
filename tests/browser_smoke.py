@@ -193,6 +193,16 @@ def click_nav(page, key, touch=False):
     page.wait_for_timeout(500)
 
 
+def sidebar_text(page):
+    """Read activity content only, so navigation labels cannot prove a route."""
+    rect = page.locator("#canvas").bounding_box()
+    scale = min(rect["width"] / 960, rect["height"] / 540)
+    left = rect["x"] + rect["width"] - 322 * scale
+    top = rect["y"] + 82 * scale
+    bottom = rect["y"] + rect["height"] - 96 * scale
+    return [text for text, (x, y) in lines(page) if x > left and top < y < bottom]
+
+
 def unit_quote(state):
     definitions = {item["id"]: item for item in json.loads((ROOT / "data/items.json").read_text())}
     cargo = sum(definitions[box["item"]["definition"]]["size"] for box in state["auction"]["boxes"])
@@ -309,17 +319,20 @@ def run():
             for width, height in [(667, 375), (812, 375), (844, 390), (932, 430)]:
                 page.set_viewport_size({"width": width, "height": height})
                 page.wait_for_timeout(800)
-                for key, expected in [("map", "YOUR GROWING TOWN"), ("home", "YOUR BUSINESS HAS A HOME"), ("inventory", "Your inventory"), ("selling", "Prepare and sell"), ("upgrades", "BUILD YOUR BUSINESS"), ("business", "Your business"), ("auction", "SUNSET")]:
+                for key, expected in [("map", "Neighborhood"), ("home", "Starter Garage"), ("inventory", "Your inventory"), ("selling", "Prepare and sell"), ("upgrades", "Appraisal desk"), ("business", "Your business"), ("auction", "Opening bid")]:
                     click_nav(page, key, touch=True)
-                    # Real touch routes are checked against visible panel text, not production debug methods.
-                    assert any(re.search(expected, text, re.I) for text, _ in lines(page)), (width, height, key, lines(page))
+                    # Read large activity text: small gold headings are unreliable
+                    # OCR targets at phone size. Exclude the navigation itself.
+                    visible = sidebar_text(page)
+                    assert any(re.search(expected, text, re.I) for text in visible), (width, height, key, visible)
                 print(f"PASS browser: all seven screens via actual touch at {width}×{height}", flush=True)
             page.set_viewport_size({"width": 844, "height": 390})
             page.wait_for_timeout(600)
             page.add_style_tag(content="#canvas{left:44px!important;top:6px!important;width:calc(100vw - 88px)!important;height:calc(100dvh - 12px)!important}")
             page.wait_for_timeout(800)
             click_nav(page, "upgrades", touch=True)
-            assert any("BUILD YOUR BUSINESS" in text.upper() for text, _ in lines(page)), lines(page)
+            visible = sidebar_text(page)
+            assert any(re.search("Appraisal desk", text, re.I) for text in visible), visible
             page.screenshot(path=str(OUT / "browser-phone-landscape.png"))
             click_nav(page, "auction", touch=True)
             print("PASS browser: touch Upgrades with simulated landscape safe-area insets", flush=True)

@@ -68,7 +68,7 @@ The required check includes editor import, gameplay/scene integration and the pr
 
 Web saves explicitly request IndexedDB synchronization after the atomic rename.
 
-Recorded headless validation: **12,378 gameplay/scene checks and 16,789 simulation checks; zero failures**. The release export and Pages package validation pass. The full browser result is recorded in TESTING.md after completion.
+Recorded headless validation: **12,378 gameplay/scene checks and 16,789 simulation checks; zero failures**. The release export and Pages package validation pass. Chromium verified the auction, six real touch-picked discoveries/collections, sales, an upgrade, IndexedDB reload/Continue and cached offline play. The combined run subsequently stopped on an OCR miss of a small map heading; after correcting that test selector, the targeted platform rerun exited 0 with all seven touch routes at four landscape sizes, simulated safe-area Upgrades access and pinch input. No runtime errors occurred in that rerun. The combined command was not repeated after the test-only correction; see TESTING.md for the precise run history.
 
 | Seeded strategy | Auctions | Win rate | Average winning price | Average profit per won unit | Loss frequency among wins |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -83,7 +83,7 @@ In the 100 sessions with an 80% ceiling and first-tier purchases while retaining
 
 Physical iPhone Safari, native iOS export and measured device FPS/memory are unrun. Chromium uses software WebGL and touch emulation; safe-area tests simulate canvas insets. Use a physical iPhone to check Safari chrome changes, notches, heat, memory, input and IndexedDB persistence. No new deployment or merge is performed by this task; the unchanged Pages workflow deploys only after changes reach main.
 
-The exceptionally conservative ceiling rarely wins; the high ceiling overpays often. Further economy tuning should use real play sessions and these reproducible reports. There is no elapsed-time or sell-through market simulation: pawn sales remain instant. Districts 3–12 and home tiers 3–5 are data-only. Staff, multiple vehicles, fleets, routes, manual driving, advanced restoration/authentication, dynamic demand, offline earnings, audio and localization are not implemented. Item silhouettes use inexpensive primitive meshes, covered props are decorative, and unit slots retain a stable six-crate layout. This is the Phase 1.5 vertical slice.
+The exceptionally conservative ceiling rarely wins; the high ceiling overpays often. Further economy tuning should use real play sessions and these reproducible reports. There is no elapsed-time or sell-through market simulation: pawn sales remain instant. Districts 3–12 and home tiers 3–5 are data-only. Staff, multiple vehicles, fleets, routes, manual driving, advanced restoration/authentication, dynamic demand, offline earnings, audio and localization are not implemented. Item silhouettes use inexpensive primitive meshes, covered props are decorative, and unit slots retain a stable six-crate layout. Garage upgrades appear immediately; transport has no dedicated transfer animation, and bidder reactions are text. This is the Phase 1.5 vertical slice.
 
 ## iPhone Safari acceptance
 
