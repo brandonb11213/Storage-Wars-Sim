@@ -20,7 +20,11 @@ func collect_box(index: int) -> bool:
 	var box: Dictionary = state.auction.boxes[index]
 	if not box.revealed or box.collected:
 		return false
+	var transport = TransportManager.new(state, ItemDatabase.new())
+	if transport.stored_cargo() + transport.database.cargo_size(box.item) > transport.storage_capacity():
+		return false
 	state.inventory.append(box.item.duplicate())
+	state.discoveries[box.item.definition] = int(state.discoveries.get(box.item.definition, 0)) + 1
 	box.collected = true
 	state.items_found += 1
 	state.experience += 5

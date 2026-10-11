@@ -14,3 +14,8 @@ godot --headless --path . --script tests/run_tests.gd 2>&1 | tee test-results/he
 if rg -n 'SCRIPT ERROR:|ERROR:' test-results/headless.log; then
   exit 1
 fi
+
+godot --headless --path . --script tests/economy_simulation.gd 2>&1 | tee test-results/economy.log
+if rg -n 'SCRIPT ERROR:|ERROR:' test-results/economy.log; then
+  exit 1
+fi

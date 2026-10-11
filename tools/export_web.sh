@@ -8,6 +8,7 @@ godot --headless --path . --export-release Web build/web/index.html 2>&1 | tee t
 if rg -n 'SCRIPT ERROR:|ERROR:' test-results/export.log; then
   exit 1
 fi
+python3 tools/prepare_web_shell.py
 test -s build/web/index.html
 test -s build/web/index.wasm
 test -s build/web/index.pck

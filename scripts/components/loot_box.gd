@@ -7,6 +7,7 @@ var body: MeshInstance3D
 var revealed: bool = false
 var collected: bool = false
 var item_model: Node3D
+var preview: Node3D
 var glow: MeshInstance3D
 
 func _ready() -> void:
@@ -40,6 +41,7 @@ func reveal(definition: Dictionary, animate: bool = true) -> void:
 	if revealed:
 		return
 	revealed = true
+	if preview: preview.hide()
 	var color: Color = ItemDatabase.COLORS[int(definition.rarity)]
 	item_model = ProceduralMesh.item_model(self, definition.shape, color)
 	item_model.position.y = 0.55
@@ -55,9 +57,10 @@ func reveal(definition: Dictionary, animate: bool = true) -> void:
 	add_child(glow)
 	if animate:
 		var tween = create_tween().set_parallel(true)
-		tween.tween_property(lid, "rotation:x", -1.9, 0.45).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-		tween.tween_property(item_model, "position:y", 1.25, 0.5).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-		tween.tween_property(item_model, "rotation:y", TAU, 0.8)
+		tween.tween_property(lid, "rotation:x", -1.9, (0.45 if int(definition.rarity) >= 2 else 0.2)).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+		tween.tween_property(item_model, "position:y", 1.25, (0.5 if int(definition.rarity) >= 2 else 0.2)).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+		if int(definition.rarity) >= 2:
+			tween.tween_property(item_model, "rotation:y", TAU, 0.8)
 	else:
 		lid.rotation.x = -1.9
 		item_model.position.y = 1.25
@@ -73,3 +76,9 @@ func mark_collected(animate: bool = true) -> void:
 	else:
 		scale = Vector3(0.7, 0.4, 0.7)
 	body.material_override = ProceduralMesh.material(Color("788d87"))
+
+func show_preview(shape: String) -> void:
+	if shape.is_empty() or revealed: return
+	preview = ProceduralMesh.item_model(self, shape, Color("79aeb6"))
+	preview.position.y = 0.95
+	preview.scale = Vector3.ONE * 0.65

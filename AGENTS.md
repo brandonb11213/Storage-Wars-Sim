@@ -2,7 +2,7 @@
 
 - Build an offline, iOS-first, landscape, 3D isometric game in Godot 4.x and GDScript. Keep the native Mobile renderer; use Compatibility for browser exports.
 - Use only free tools and original procedural assets. No paid services, assets, dependencies, hosting, or APIs.
-- Implement Phase 0–1 only until the user authorizes Phase 2. See DEVELOPMENT_PLAN.md.
+- Implement the authorized Phase 1.5 vertical slice; do not implement Phase 2 without authorization. See DEVELOPMENT_PLAN.md.
 - Keep systems modular and data driven. Items belong in data/items.json, never individual item scripts. Seed procedural generation.
 - Use the existing isolated checkout; do not create Git worktrees unless explicitly requested.
 - Preserve touch pan, pinch zoom, tap picking, scalable UI, and eventual native iOS export compatibility.

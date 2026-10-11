@@ -1,17 +1,16 @@
 # Storage Wars Sim
 
-An offline, landscape, 3D isometric storage-auction game built with Godot 4.6.3 and GDScript. Phase 0–1 is the current milestone; the larger business simulation is planned, not implemented. All visuals are original procedural meshes and materials. No external assets, APIs, services, or paid dependencies are used.
+An offline, landscape, 3D isometric storage-auction game built with Godot 4.6.3 and GDScript. Phase 1.5 is the current vertical slice; future business systems remain planned. All visuals are original procedural meshes and materials. No external assets, APIs, services, or paid dependencies are used.
 
-## Play the milestone
+## Play Phase 1.5
 
-1. Choose **New Game** to start with $500, a garage, and an old pickup. **Continue** restores local progress. Starting fresh requires confirmation when a save exists.
-2. Preview the six sealed crates and choose **Enter auction**. **Bid** raises the price by $10; the three rivals reply after a short pause. **Pass / finish auction** resolves the remaining bidding. Cash is charged only when you win.
-3. Tap a 3D crate, inspect its rarity, condition, estimated market value, and pawn offer, then **Collect to inventory**. Collect all six before starting another unit.
-4. Open **Inventory / Pawn**, select items individually or select all, and sell. The shown offer is the exact cash payment.
-5. Open **Business** to view cash profit/loss and purchase appraisal or auction-access upgrades. Upgrades are unavailable while bidding.
-6. Save, return to the menu, continue, and repeat. Every mutation also autosaves. A garage clear-out recovery job becomes available when inventory is empty and cash is below auction funding ($35 or the current opening bid, whichever is higher).
+Start with $500, a starter garage and a pickup. Explore the town using tappable buildings or the seven direct tabs: **Map, Auctions, Home, Inventory, Selling, Upgrades, Business**. Inspect visible auction clues, bid against three of six imperfect NPC archetypes, then discover and transport winnings, sell or prepare items and build your garage business. Winning requires funding both the bid and the displayed transport fee; some units are poor investments. Free recovery work is available when stock and auction funds run out.
 
-Touch: tap crates and buttons, drag the world to pan, pinch to zoom. Desktop: left-click/drag and mouse wheel. The bottom bar also has zoom and recenter buttons. Scroll the right panel to reach longer inventory and business lists.
+Buy shelving, appraisal, cleaning/restoration equipment, a cargo rack and business upgrades. The $300 garage expansion requires level 2; the $250 Suburban permit requires level 3 and that garage. Unlocking the second district adds a connected area to the town. Changes save locally after every mutation, and version 1 saves migrate without dropping existing items or paid auction progress.
+
+Touch: tap buildings/crates/buttons, drag the world to pan, pinch to zoom. Desktop: click/drag and mouse wheel. Camera controls are above the world; activity panels scroll. **Upgrades** has its own always-accessible bottom button. The web canvas respects Safari safe areas.
+
+See [the implementation report](docs/PHASE_1_5.md) for features, upgrade effects, economy results, known limits and iPhone testing steps.
 
 ## Develop and run
 
@@ -46,22 +45,8 @@ For background cloud startup with HTTP readiness checks, run `bash tools/start_w
 
 ## Architecture
 
-| Component | Responsibility |
-| --- | --- |
-| `GameState` | Cash, inventory, progression, active unit, counters, stable IDs and seed |
-| `AuctionManager` | Opening bid, three NPC strategies, affordability and settlement |
-| `ItemDatabase` | 60 JSON definitions, six rarity tiers, conditions and estimates |
-| `StorageUnitGenerator` | Seeded themes and six-item storage units |
-| `InventoryManager` | Reveal/collect ownership rules and duplicate prevention |
-| `EconomyManager` | Explicit pawn offers, atomic sales and cash profit/loss |
-| `ProgressionManager` | XP/levels and three tiers of two upgrades |
-| `SaveManager` | Versioned, schema-validated, checksummed local saves and backup recovery |
-| `TouchCameraController` | Orthographic isometric camera, pan, pinch, tap, smooth focus |
-| `StorageFacility` / `LootBox` | Procedural environment, physics picking and reveal animations |
-| `main.gd` | Scene integration, scalable UI and autosave orchestration |
+The existing managers remain the foundation: `GameState`, `AuctionManager`, `ItemDatabase`, `StorageUnitGenerator`, `InventoryManager`, `EconomyManager`, `ProgressionManager` and `SaveManager`. New `GameplayData` loads unit themes, treasure probabilities, eleven upgrades, twelve districts and five home tiers from `data/gameplay.json`; 74 item definitions live in `data/items.json`. `TransportManager` quotes trips/costs and storage capacity. Reusable procedural meshes build storage previews, home equipment and district scenes. `main.gd` connects the UI, touch camera, physics picking, autosaves and milestones.
 
-Save data lives at `user://storage_wars_save.json` with a `.bak` fallback and temporary atomic-write file. In this cloud setup, native test data is under `/workspace/.runtime/data/godot/app_userdata/Storage Wars Sim`; web data lives in the browser's IndexedDB. Saves persist cash, inventory, XP, upgrade tiers, accounting, seed/IDs, and partially explored or active auctions. Clearing site data removes browser progress. The checksum detects corruption; it is not anti-cheat encryption. Schema version 1 has no migration from future versions.
+Saves live at `user://storage_wars_save.json`, with a validated `.bak` fallback and temporary atomic-write file. Browser saves use IndexedDB. Version 2 validates and migrates version 1. Clearing site data deletes progress. The checksum detects corruption; it is not anti-cheat encryption.
 
-Implemented: complete initial loop, 60 discoveries across six rarities, one interactive cutaway unit and decorative adjacent bays, procedural furniture/props/pickup, three named rivals, two upgrade tracks, local save/load and financial dashboard. No external connectivity is required by gameplay.
-
-Incomplete by design: functioning transport/garage management, business premises and staffing, fleets/routes, restoration/authentication, quests, town districts, collections, avatar customization, dynamic demand, offline earnings, and the larger content targets. Native iOS export, physical iPhone testing, audio, accessibility screen-reader support, localization, and measured device performance are not validated or completed. See [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md). Do not start Phase 2 without authorization.
+Only home tiers 1–2 and districts 1–2 are built. Phase 2 remains unauthorized. Physical Safari, native iOS and measured device performance still need testing; see [TESTING.md](TESTING.md).

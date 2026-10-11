@@ -5,7 +5,10 @@
     "category": "Kitchen",
     "value": 12,
     "rarity": 0,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued enamel camp mug. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "desk_lamp",
@@ -13,7 +16,10 @@
     "category": "Lighting",
     "value": 22,
     "rarity": 0,
-    "shape": "lamp"
+    "shape": "lamp",
+    "size": 1,
+    "description": "A rescued desk lamp. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "wood_stool",
@@ -21,7 +27,10 @@
     "category": "Furniture",
     "value": 25,
     "rarity": 0,
-    "shape": "stool"
+    "shape": "stool",
+    "size": 3,
+    "description": "A rescued wooden stool. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "paperbacks",
@@ -29,7 +38,10 @@
     "category": "Books",
     "value": 15,
     "rarity": 0,
-    "shape": "books"
+    "shape": "books",
+    "size": 1,
+    "description": "A rescued paperback bundle. Condition and local demand determine its resale potential.",
+    "set": "shelf_classics"
   },
   {
     "id": "hand_tools",
@@ -37,7 +49,10 @@
     "category": "Tools",
     "value": 30,
     "rarity": 0,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued hand tool kit. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "picnic_basket",
@@ -45,7 +60,10 @@
     "category": "Home",
     "value": 18,
     "rarity": 0,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued picnic basket. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "alarm_clock",
@@ -53,7 +71,10 @@
     "category": "Electronics",
     "value": 20,
     "rarity": 0,
-    "shape": "small"
+    "shape": "small",
+    "size": 3,
+    "description": "A rescued alarm clock. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "plant_pot",
@@ -61,7 +82,10 @@
     "category": "Garden",
     "value": 16,
     "rarity": 0,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued ceramic planter. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "skateboard",
@@ -69,7 +93,10 @@
     "category": "Sport",
     "value": 28,
     "rarity": 0,
-    "shape": "long"
+    "shape": "long",
+    "size": 1,
+    "description": "A rescued scuffed skateboard. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "board_game",
@@ -77,7 +104,10 @@
     "category": "Games",
     "value": 19,
     "rarity": 0,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued board game. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "denim_jacket",
@@ -85,7 +115,10 @@
     "category": "Clothing",
     "value": 24,
     "rarity": 0,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued denim jacket. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "mixing_bowl",
@@ -93,7 +126,10 @@
     "category": "Kitchen",
     "value": 14,
     "rarity": 0,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued mixing bowl. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "picture_frame",
@@ -101,7 +137,10 @@
     "category": "Art",
     "value": 13,
     "rarity": 0,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued oak picture frame. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "vinyl_bundle",
@@ -109,7 +148,10 @@
     "category": "Music",
     "value": 27,
     "rarity": 0,
-    "shape": "records"
+    "shape": "records",
+    "size": 1,
+    "description": "A rescued vinyl bundle. Condition and local demand determine its resale potential.",
+    "set": "shelf_classics"
   },
   {
     "id": "toy_truck",
@@ -117,7 +159,10 @@
     "category": "Toys",
     "value": 21,
     "rarity": 0,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued tin toy truck. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "garden_spade",
@@ -125,7 +170,10 @@
     "category": "Garden",
     "value": 17,
     "rarity": 0,
-    "shape": "long"
+    "shape": "long",
+    "size": 1,
+    "description": "A rescued garden spade. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "coffee_grinder",
@@ -133,7 +181,10 @@
     "category": "Kitchen",
     "value": 48,
     "rarity": 1,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued coffee grinder. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "record_player",
@@ -141,7 +192,10 @@
     "category": "Music",
     "value": 65,
     "rarity": 1,
-    "shape": "records"
+    "shape": "records",
+    "size": 1,
+    "description": "A rescued record player. Condition and local demand determine its resale potential.",
+    "set": "shelf_classics"
   },
   {
     "id": "sewing_machine",
@@ -149,7 +203,10 @@
     "category": "Tools",
     "value": 72,
     "rarity": 1,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued sewing machine. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "copper_pan",
@@ -157,7 +214,10 @@
     "category": "Kitchen",
     "value": 42,
     "rarity": 1,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued copper saucepan. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "side_table",
@@ -165,7 +225,10 @@
     "category": "Furniture",
     "value": 60,
     "rarity": 1,
-    "shape": "stool"
+    "shape": "stool",
+    "size": 3,
+    "description": "A rescued midcentury side table. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "binoculars",
@@ -173,7 +236,10 @@
     "category": "Optics",
     "value": 55,
     "rarity": 1,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued birding binoculars. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "typewriter",
@@ -181,7 +247,10 @@
     "category": "Office",
     "value": 75,
     "rarity": 1,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued portable typewriter. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "camera",
@@ -189,7 +258,10 @@
     "category": "Photography",
     "value": 70,
     "rarity": 1,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued film camera. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "ukulele",
@@ -197,7 +269,10 @@
     "category": "Music",
     "value": 50,
     "rarity": 1,
-    "shape": "long"
+    "shape": "long",
+    "size": 1,
+    "description": "A rescued travel ukulele. Condition and local demand determine its resale potential.",
+    "set": "shelf_classics"
   },
   {
     "id": "snow_globe",
@@ -205,15 +280,21 @@
     "category": "Collectibles",
     "value": 38,
     "rarity": 1,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued harbor snow globe. Condition and local demand determine its resale potential.",
+    "set": "shelf_classics"
   },
   {
     "id": "tool_chest",
-    "name": "Steel tool chest",
+    "name": "Workshop tool chest",
     "category": "Tools",
-    "value": 68,
+    "value": 150,
     "rarity": 1,
-    "shape": "small"
+    "shape": "tool_chest",
+    "size": 3,
+    "description": "A promising discovery. Repairs, missing parts, and demand can turn a treasure into an expensive lesson.",
+    "set": ""
   },
   {
     "id": "chess_set",
@@ -221,7 +302,10 @@
     "category": "Games",
     "value": 46,
     "rarity": 1,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued carved chess set. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "leather_bag",
@@ -229,7 +313,10 @@
     "category": "Clothing",
     "value": 58,
     "rarity": 1,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued leather satchel. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "guitar_amp",
@@ -237,7 +324,10 @@
     "category": "Music",
     "value": 62,
     "rarity": 1,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued practice amplifier. Condition and local demand determine its resale potential.",
+    "set": "shelf_classics"
   },
   {
     "id": "arcade_console",
@@ -245,7 +335,10 @@
     "category": "Games",
     "value": 120,
     "rarity": 2,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued retro game console. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "silver_teapot",
@@ -253,7 +346,10 @@
     "category": "Kitchen",
     "value": 185,
     "rarity": 2,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued silver teapot. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "divers_watch",
@@ -261,7 +357,10 @@
     "category": "Jewelry",
     "value": 210,
     "rarity": 2,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued divers watch. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "brass_telescope",
@@ -269,7 +368,10 @@
     "category": "Optics",
     "value": 165,
     "rarity": 2,
-    "shape": "long"
+    "shape": "long",
+    "size": 1,
+    "description": "A rescued brass telescope. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "studio_microphone",
@@ -277,7 +379,10 @@
     "category": "Music",
     "value": 135,
     "rarity": 2,
-    "shape": "lamp"
+    "shape": "lamp",
+    "size": 1,
+    "description": "A rescued studio microphone. Condition and local demand determine its resale potential.",
+    "set": "shelf_classics"
   },
   {
     "id": "art_print",
@@ -285,7 +390,10 @@
     "category": "Art",
     "value": 155,
     "rarity": 2,
-    "shape": "books"
+    "shape": "books",
+    "size": 1,
+    "description": "A rescued signed art print. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "vintage_radio",
@@ -293,7 +401,10 @@
     "category": "Electronics",
     "value": 110,
     "rarity": 2,
-    "shape": "small"
+    "shape": "small",
+    "size": 3,
+    "description": "A rescued vintage radio. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "porcelain_vase",
@@ -301,7 +412,10 @@
     "category": "Home",
     "value": 140,
     "rarity": 2,
-    "shape": "vase"
+    "shape": "vase",
+    "size": 1,
+    "description": "A rescued porcelain vase. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "racing_bike",
@@ -309,7 +423,10 @@
     "category": "Sport",
     "value": 220,
     "rarity": 2,
-    "shape": "long"
+    "shape": "long",
+    "size": 1,
+    "description": "A rescued vintage racing bike. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "first_edition",
@@ -317,7 +434,10 @@
     "category": "Books",
     "value": 175,
     "rarity": 2,
-    "shape": "books"
+    "shape": "books",
+    "size": 1,
+    "description": "A rescued first edition novel. Condition and local demand determine its resale potential.",
+    "set": "shelf_classics"
   },
   {
     "id": "electric_guitar",
@@ -325,7 +445,10 @@
     "category": "Music",
     "value": 340,
     "rarity": 3,
-    "shape": "long"
+    "shape": "long",
+    "size": 1,
+    "description": "A rescued sunburst electric guitar. Condition and local demand determine its resale potential.",
+    "set": "shelf_classics"
   },
   {
     "id": "antique_globe",
@@ -333,7 +456,10 @@
     "category": "Collectibles",
     "value": 300,
     "rarity": 3,
-    "shape": "vase"
+    "shape": "vase",
+    "size": 1,
+    "description": "A rescued antique globe. Condition and local demand determine its resale potential.",
+    "set": "shelf_classics"
   },
   {
     "id": "marble_bust",
@@ -341,7 +467,10 @@
     "category": "Art",
     "value": 420,
     "rarity": 3,
-    "shape": "vase"
+    "shape": "vase",
+    "size": 1,
+    "description": "A rescued marble explorer bust. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "jukebox",
@@ -349,7 +478,10 @@
     "category": "Music",
     "value": 450,
     "rarity": 3,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued mini jukebox. Condition and local demand determine its resale potential.",
+    "set": "shelf_classics"
   },
   {
     "id": "gold_pendant",
@@ -357,7 +489,10 @@
     "category": "Jewelry",
     "value": 380,
     "rarity": 3,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued gold compass pendant. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "designer_chair",
@@ -365,7 +500,10 @@
     "category": "Furniture",
     "value": 410,
     "rarity": 3,
-    "shape": "stool"
+    "shape": "stool",
+    "size": 3,
+    "description": "A rescued sculpted lounge chair. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "mechanical_clock",
@@ -373,7 +511,10 @@
     "category": "Home",
     "value": 360,
     "rarity": 3,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued mechanical mantel clock. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "rare_comic",
@@ -381,7 +522,10 @@
     "category": "Books",
     "value": 325,
     "rarity": 3,
-    "shape": "books"
+    "shape": "books",
+    "size": 1,
+    "description": "A rescued golden-era comic. Condition and local demand determine its resale potential.",
+    "set": "shelf_classics"
   },
   {
     "id": "master_violin",
@@ -389,7 +533,10 @@
     "category": "Music",
     "value": 950,
     "rarity": 4,
-    "shape": "long"
+    "shape": "long",
+    "size": 1,
+    "description": "A rescued master-crafted violin. Condition and local demand determine its resale potential.",
+    "set": "shelf_classics"
   },
   {
     "id": "ruby_ring",
@@ -397,7 +544,10 @@
     "category": "Jewelry",
     "value": 1100,
     "rarity": 4,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued ruby ring. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "museum_vase",
@@ -405,7 +555,10 @@
     "category": "Art",
     "value": 880,
     "rarity": 4,
-    "shape": "vase"
+    "shape": "vase",
+    "size": 1,
+    "description": "A rescued imperial ceramic vase. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "space_patch",
@@ -413,7 +566,10 @@
     "category": "Collectibles",
     "value": 760,
     "rarity": 4,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued flown mission patch. Condition and local demand determine its resale potential.",
+    "set": "shelf_classics"
   },
   {
     "id": "gold_coin",
@@ -421,7 +577,10 @@
     "category": "Collectibles",
     "value": 1200,
     "rarity": 4,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued historic gold coin. Condition and local demand determine its resale potential.",
+    "set": "shelf_classics"
   },
   {
     "id": "racing_trophy",
@@ -429,7 +588,10 @@
     "category": "Sport",
     "value": 680,
     "rarity": 4,
-    "shape": "vase"
+    "shape": "vase",
+    "size": 1,
+    "description": "A rescued grand prix trophy. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "prototype_camera",
@@ -437,7 +599,10 @@
     "category": "Photography",
     "value": 1050,
     "rarity": 4,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued prototype film camera. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "celestial_map",
@@ -445,7 +610,10 @@
     "category": "Art",
     "value": 2800,
     "rarity": 5,
-    "shape": "books"
+    "shape": "books",
+    "size": 1,
+    "description": "A rescued celestial expedition map. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "royal_chronometer",
@@ -453,7 +621,10 @@
     "category": "Collectibles",
     "value": 3600,
     "rarity": 5,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued royal marine chronometer. Condition and local demand determine its resale potential.",
+    "set": "shelf_classics"
   },
   {
     "id": "meteorite",
@@ -461,7 +632,10 @@
     "category": "Science",
     "value": 2400,
     "rarity": 5,
-    "shape": "vase"
+    "shape": "vase",
+    "size": 1,
+    "description": "A rescued crystalline meteorite. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "lost_masterpiece",
@@ -469,7 +643,10 @@
     "category": "Art",
     "value": 4800,
     "rarity": 5,
-    "shape": "books"
+    "shape": "books",
+    "size": 1,
+    "description": "A rescued lost harbor masterpiece. Condition and local demand determine its resale potential.",
+    "set": ""
   },
   {
     "id": "diamond_brooch",
@@ -477,6 +654,164 @@
     "category": "Jewelry",
     "value": 5200,
     "rarity": 5,
-    "shape": "small"
+    "shape": "small",
+    "size": 1,
+    "description": "A rescued starlight diamond brooch. Condition and local demand determine its resale potential.",
+    "set": ""
+  },
+  {
+    "id": "motorcycle",
+    "name": "Vintage motorcycle",
+    "category": "Vehicles",
+    "value": 420,
+    "rarity": 2,
+    "shape": "motorcycle",
+    "size": 6,
+    "description": "A promising discovery. Repairs, missing parts, and demand can turn a treasure into an expensive lesson.",
+    "set": ""
+  },
+  {
+    "id": "arcade",
+    "name": "Vintage arcade cabinet",
+    "category": "Electronics",
+    "value": 340,
+    "rarity": 2,
+    "shape": "arcade",
+    "size": 4,
+    "description": "A promising discovery. Repairs, missing parts, and demand can turn a treasure into an expensive lesson.",
+    "set": ""
+  },
+  {
+    "id": "television",
+    "name": "Large television",
+    "category": "Electronics",
+    "value": 100,
+    "rarity": 0,
+    "shape": "television",
+    "size": 3,
+    "description": "A promising discovery. Repairs, missing parts, and demand can turn a treasure into an expensive lesson.",
+    "set": ""
+  },
+  {
+    "id": "safe",
+    "name": "Locked steel safe",
+    "category": "Collectibles",
+    "value": 200,
+    "rarity": 2,
+    "shape": "safe",
+    "size": 4,
+    "description": "A promising discovery. Repairs, missing parts, and demand can turn a treasure into an expensive lesson.",
+    "set": "shelf_classics"
+  },
+  {
+    "id": "luggage",
+    "name": "Designer luggage",
+    "category": "Home",
+    "value": 240,
+    "rarity": 2,
+    "shape": "luggage",
+    "size": 2,
+    "description": "A promising discovery. Repairs, missing parts, and demand can turn a treasure into an expensive lesson.",
+    "set": ""
+  },
+  {
+    "id": "guitar",
+    "name": "Touring guitar",
+    "category": "Music",
+    "value": 280,
+    "rarity": 2,
+    "shape": "guitar",
+    "size": 2,
+    "description": "A promising discovery. Repairs, missing parts, and demand can turn a treasure into an expensive lesson.",
+    "set": ""
+  },
+  {
+    "id": "classic_car",
+    "name": "Covered project car",
+    "category": "Vehicles",
+    "value": 1400,
+    "rarity": 3,
+    "shape": "car",
+    "size": 6,
+    "description": "A promising discovery. Repairs, missing parts, and demand can turn a treasure into an expensive lesson.",
+    "set": ""
+  },
+  {
+    "id": "jewelry",
+    "name": "Estate jewelry case",
+    "category": "Collectibles",
+    "value": 600,
+    "rarity": 3,
+    "shape": "jewelry",
+    "size": 1,
+    "description": "A promising discovery. Repairs, missing parts, and demand can turn a treasure into an expensive lesson.",
+    "set": "shelf_classics"
+  },
+  {
+    "id": "vending",
+    "name": "Vintage vending machine",
+    "category": "Collectibles",
+    "value": 800,
+    "rarity": 3,
+    "shape": "vending",
+    "size": 4,
+    "description": "A promising discovery. Repairs, missing parts, and demand can turn a treasure into an expensive lesson.",
+    "set": "shelf_classics"
+  },
+  {
+    "id": "boat_motor",
+    "name": "Outboard boat motor",
+    "category": "Tools",
+    "value": 500,
+    "rarity": 2,
+    "shape": "boat_motor",
+    "size": 3,
+    "description": "A promising discovery. Repairs, missing parts, and demand can turn a treasure into an expensive lesson.",
+    "set": ""
+  },
+  {
+    "id": "gaming_pc",
+    "name": "Gaming PC tower",
+    "category": "Electronics",
+    "value": 480,
+    "rarity": 2,
+    "shape": "gaming_pc",
+    "size": 2,
+    "description": "A promising discovery. Repairs, missing parts, and demand can turn a treasure into an expensive lesson.",
+    "set": ""
+  },
+  {
+    "id": "trophy",
+    "name": "Signed sports display",
+    "category": "Sports",
+    "value": 320,
+    "rarity": 2,
+    "shape": "trophy",
+    "size": 2,
+    "description": "A promising discovery. Repairs, missing parts, and demand can turn a treasure into an expensive lesson.",
+    "set": ""
+  },
+  {
+    "id": "cabinet",
+    "name": "Collector cabinet",
+    "category": "Collectibles",
+    "value": 1100,
+    "rarity": 4,
+    "shape": "cabinet",
+    "size": 4,
+    "description": "A promising discovery. Repairs, missing parts, and demand can turn a treasure into an expensive lesson.",
+    "set": "shelf_classics"
+  },
+  {
+    "id": "recovery_lot",
+    "name": "Garage clearance tool lot",
+    "category": "Tools",
+    "value": 280,
+    "rarity": 0,
+    "shape": "tool_chest",
+    "size": 3,
+    "description": "A neighbor's salvage tool lot, earned by clearing their garage. Sell it to rebuild your auction budget.",
+    "set": "",
+    "recovery_only": true
   }
 ]
