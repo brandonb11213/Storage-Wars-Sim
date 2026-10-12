@@ -1,0 +1,349 @@
+{
+  "featured_probabilities": [
+    0.65,
+    0.25,
+    0.08,
+    0.02
+  ],
+  "themes": [
+    {
+      "name": "Household Clutter",
+      "categories": [
+        "Home",
+        "Kitchen",
+        "Lighting",
+        "Books"
+      ],
+      "clue_value": 140,
+      "props": [
+        "stool",
+        "lamp"
+      ]
+    },
+    {
+      "name": "Electronics",
+      "categories": [
+        "Electronics"
+      ],
+      "clue_value": 240,
+      "props": [
+        "television",
+        "gaming_pc"
+      ]
+    },
+    {
+      "name": "Garage Tools",
+      "categories": [
+        "Tools"
+      ],
+      "clue_value": 180,
+      "props": [
+        "tool_chest",
+        "boat_motor"
+      ]
+    },
+    {
+      "name": "Vintage Collectibles",
+      "categories": [
+        "Collectibles",
+        "Music",
+        "Books"
+      ],
+      "clue_value": 260,
+      "props": [
+        "vase",
+        "records"
+      ]
+    },
+    {
+      "name": "Furniture",
+      "categories": [
+        "Furniture"
+      ],
+      "clue_value": 180,
+      "props": [
+        "stool",
+        "cabinet"
+      ]
+    },
+    {
+      "name": "Sports Memorabilia",
+      "categories": [
+        "Sports",
+        "Collectibles"
+      ],
+      "clue_value": 210,
+      "props": [
+        "trophy",
+        "luggage"
+      ]
+    },
+    {
+      "name": "Abandoned Workshop",
+      "categories": [
+        "Tools",
+        "Vehicles"
+      ],
+      "clue_value": 230,
+      "props": [
+        "tool_chest",
+        "motorcycle"
+      ]
+    },
+    {
+      "name": "Premium Mystery Unit",
+      "categories": [
+        "Collectibles",
+        "Electronics",
+        "Music"
+      ],
+      "clue_value": 320,
+      "props": [
+        "safe",
+        "luggage"
+      ]
+    }
+  ],
+  "featured_pools": [
+    [
+      "tool_chest",
+      "television",
+      "luggage",
+      "guitar",
+      "trophy",
+      "gaming_pc"
+    ],
+    [
+      "motorcycle",
+      "arcade",
+      "safe",
+      "boat_motor"
+    ],
+    [
+      "classic_car",
+      "jewelry",
+      "vending",
+      "cabinet"
+    ]
+  ],
+  "upgrades": {
+    "appraisal": {
+      "name": "Appraisal desk",
+      "description": "Sharper estimates and +4% pawn offers per tier.",
+      "base_cost": 75,
+      "max": 3,
+      "level": 1,
+      "requires": ""
+    },
+    "auction_access": {
+      "name": "Auction pass",
+      "description": "Better rare-item odds; higher opening bids.",
+      "base_cost": 120,
+      "max": 3,
+      "level": 1,
+      "requires": ""
+    },
+    "shelving": {
+      "name": "Storage shelving",
+      "description": "Adds 12 cargo spaces per tier.",
+      "base_cost": 90,
+      "max": 2,
+      "level": 1,
+      "requires": ""
+    },
+    "garage": {
+      "name": "Expanded garage",
+      "description": "Adds a garage wing, work zone and 18 storage spaces.",
+      "base_cost": 300,
+      "max": 1,
+      "level": 2,
+      "requires": ""
+    },
+    "cleaning": {
+      "name": "Cleaning station",
+      "description": "Clean Worn/Fair items once: +20% value for 8% of value.",
+      "base_cost": 100,
+      "max": 1,
+      "level": 1,
+      "requires": ""
+    },
+    "restoration": {
+      "name": "Restoration bench",
+      "description": "Restore Good items to Pristine: +25% value for 15% of value.",
+      "base_cost": 220,
+      "max": 1,
+      "level": 2,
+      "requires": "cleaning"
+    },
+    "vehicle": {
+      "name": "Pickup cargo rack",
+      "description": "Adds 6 cargo spaces per trip; fewer paid trips.",
+      "base_cost": 160,
+      "max": 1,
+      "level": 1,
+      "requires": ""
+    },
+    "selling": {
+      "name": "Resale counter",
+      "description": "Adds 5% to all sale offers.",
+      "base_cost": 130,
+      "max": 2,
+      "level": 2,
+      "requires": ""
+    },
+    "demand": {
+      "name": "Showroom sign",
+      "description": "Adds 10% to Rare or better sale offers.",
+      "base_cost": 200,
+      "max": 1,
+      "level": 2,
+      "requires": ""
+    },
+    "operations": {
+      "name": "Dispatch desk",
+      "description": "Reduces each transport trip by $2.",
+      "base_cost": 180,
+      "max": 1,
+      "level": 2,
+      "requires": ""
+    },
+    "district": {
+      "name": "Suburban permit",
+      "description": "Unlocks a larger auction area with its own item mix.",
+      "base_cost": 250,
+      "max": 1,
+      "level": 3,
+      "requires": "garage"
+    }
+  },
+  "districts": [
+    {
+      "id": 0,
+      "name": "Starter Neighborhood",
+      "implemented": true,
+      "level": 1,
+      "cost": 0,
+      "scene": "res://scenes/world/starter_district.tscn"
+    },
+    {
+      "id": 1,
+      "name": "Suburban Storage District",
+      "implemented": true,
+      "level": 5,
+      "cost": 250,
+      "scene": "res://scenes/world/suburban_district.tscn"
+    },
+    {
+      "id": 2,
+      "name": "Downtown Resale District",
+      "implemented": false,
+      "level": 7,
+      "cost": 500,
+      "scene": ""
+    },
+    {
+      "id": 3,
+      "name": "Industrial Warehouse District",
+      "implemented": false,
+      "level": 9,
+      "cost": 750,
+      "scene": ""
+    },
+    {
+      "id": 4,
+      "name": "Rural Barn Auctions",
+      "implemented": false,
+      "level": 11,
+      "cost": 1000,
+      "scene": ""
+    },
+    {
+      "id": 5,
+      "name": "Commercial Business Park",
+      "implemented": false,
+      "level": 13,
+      "cost": 1250,
+      "scene": ""
+    },
+    {
+      "id": 6,
+      "name": "Wealthy Estate District",
+      "implemented": false,
+      "level": 15,
+      "cost": 1500,
+      "scene": ""
+    },
+    {
+      "id": 7,
+      "name": "Coastal Marina District",
+      "implemented": false,
+      "level": 17,
+      "cost": 1750,
+      "scene": ""
+    },
+    {
+      "id": 8,
+      "name": "Collector\u2019s Market District",
+      "implemented": false,
+      "level": 19,
+      "cost": 2000,
+      "scene": ""
+    },
+    {
+      "id": 9,
+      "name": "Luxury Auction District",
+      "implemented": false,
+      "level": 21,
+      "cost": 2250,
+      "scene": ""
+    },
+    {
+      "id": 10,
+      "name": "Regional Logistics Hub",
+      "implemented": false,
+      "level": 23,
+      "cost": 2500,
+      "scene": ""
+    },
+    {
+      "id": 11,
+      "name": "Elite Auction District",
+      "implemented": false,
+      "level": 25,
+      "cost": 2750,
+      "scene": ""
+    }
+  ],
+  "home_tiers": [
+    {
+      "tier": 1,
+      "name": "Starter Garage",
+      "implemented": true,
+      "capacity": 24
+    },
+    {
+      "tier": 2,
+      "name": "Expanded Garage",
+      "implemented": true,
+      "capacity": 42
+    },
+    {
+      "tier": 3,
+      "name": "Small Warehouse",
+      "implemented": false,
+      "capacity": 100
+    },
+    {
+      "tier": 4,
+      "name": "Commercial Warehouse",
+      "implemented": false,
+      "capacity": 250
+    },
+    {
+      "tier": 5,
+      "name": "Resale Headquarters",
+      "implemented": false,
+      "capacity": 600
+    }
+  ]
+}

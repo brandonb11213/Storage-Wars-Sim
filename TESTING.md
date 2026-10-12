@@ -1,5 +1,20 @@
 # Testing and platform limits
 
+## Phase 1.5 validation
+
+The current milestone is documented in [docs/PHASE_1_5.md](docs/PHASE_1_5.md). The historical Phase 0–1 results below remain a record of the previous game.
+
+October 11, 2026: Godot 4.6.3 editor import and **12,378 gameplay/scene checks pass**, including NPC wins/losses, hidden-value privacy, atomic acquisition/transport/sales/preparation, capacity recovery, quests, v1→v2 save migration, a paid partially explored legacy unit, backup recovery, two district scenes, garage/cargo upgrades and all seven navigation routes at 667×375, 812×375, 844×390 and 932×430. No gameplay runtime dependencies were added.
+
+`bash tools/check.sh` now also runs `tests/economy_simulation.gd`: **16,789 checks pass** across 2,000 seeded standalone auctions, 100 sessions of 40 auctions and 100 zero-cash recovery fixtures. The ignored JSON report contains observed win rates, profit/loss, NPC budgets, feature counts, upgrade affordability and progression counts. Detailed strategy definitions and outcomes are in the milestone report.
+
+The single-threaded release export and `tests/validate_web_export.py` pass at the Pages project path. The export contains 74 item definitions, data-driven gameplay configuration and all modular scenes. The web shell adds viewport-fit and safe-area canvas sizing. Browser regression now exercises all seven screens through actual touch at the four landscape sizes and simulates safe-area canvas insets.
+
+Chromium verified actual NPC competition, exact purchase/transport/reward accounting, six physics-picked touch reveals and collections, selected pawn sales, the $75 appraisal purchase, IndexedDB reload/Continue and cached offline reload. The combined command then exited 1 because OCR missed the small gold map heading at 667×375 even though the map was open. The selector now reads larger activity text inside the sidebar, excluding navigation labels. The targeted `bash tools/check_browser.sh --base-path /Storage-Wars-Sim --platform-only` rerun exited **0**: all seven screens via real touch at 667×375, 812×375, 844×390 and 932×430; Upgrades with simulated 44-pixel landscape side insets; pinch input; no runtime errors. The complete combined command was not repeated after this test-only selector correction.
+
+Physical iPhone Safari, native iOS export and measured device performance remain unrun. Follow the current acceptance steps in the milestone report; the old three-tab/three-bidder walkthrough below describes Phase 0–1.
+
+
 ## Required development checks
 
 From the checkout:
@@ -22,7 +37,7 @@ Coverage includes:
 - Save round-trip including partially collected/revealed units, corrupt/missing file behavior, backup recovery, malformed schema and invalid IDs/tiers/cash.
 - The real scene's controls: auction, physics-ray crate taps, collect, pawn sale, upgrade, Save, Menu, Continue and a second auction. Camera pan/zoom methods are checked too.
 
-The runner currently executes **12,222 assertions with zero failures** on Godot 4.6.3. Counts include individual samples; they are not 12,222 independently named test cases. Headless import and the single-threaded release web export pass. The generated web package is about 37 MB uncompressed, dominated by the engine's WASM binary.
+The historical Phase 0–1 runner executed **12,222 assertions with zero failures** on Godot 4.6.3; current Phase 1.5 counts are recorded above. Counts include individual samples, rather than independently named test cases. Headless import and the single-threaded release web export pass. The generated web package is about 38 MB uncompressed, dominated by the engine's WASM binary.
 
 ## Browser regression
 

@@ -32,3 +32,8 @@ Cash profit/loss currently means accumulated sale revenue minus all auction purc
 ## Known follow-up work
 
 Confirm physical iPhone Safari UI targets, notch/safe-area behavior, PWA offline storage, thermal performance and touch gestures. Profile/merge static meshes before scaling the town. Validate the native Mobile renderer and iOS export on macOS/Xcode with free development provisioning where supported. Public/App Store distribution is not included, and no paid account or service may be purchased. Complete separate platform verification before release claims.
+
+
+## Authorized Phase 1.5 vertical slice
+
+The October 11, 2026 request authorizes the gameplay overhaul described in [docs/PHASE_1_5.md](docs/PHASE_1_5.md): direct mobile navigation, competitive auctions, featured procedural silhouettes, eight themes, two town districts, two garage tiers, functional upgrades, pickup capacity/costs, preparation, milestones and validated v1 save migration. Later districts and garage tiers are data only. Phase 2 remains unauthorized.

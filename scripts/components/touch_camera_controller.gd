@@ -10,6 +10,7 @@ var dragging: bool = false
 var moved: bool = false
 var pinch_distance: float = 0
 var transition: Tween
+var pan_bounds: Rect2 = Rect2(-16, -16, 32, 32)
 
 func _ready() -> void:
 	position = Vector3(-1, 0, -1)
@@ -23,11 +24,14 @@ func _ready() -> void:
 	camera.far = 120
 
 func focus_unit() -> void:
+	focus(Vector3(-1.1, 0, 0), 14.5)
+
+func focus(center: Vector3, distance: float) -> void:
 	if transition and transition.is_running():
 		transition.kill()
 	transition = create_tween().set_parallel(true)
-	transition.tween_property(self, "position", Vector3(-1.1, 0, 0), 0.6).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
-	transition.tween_property(camera, "size", 14.5, 0.6).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
+	transition.tween_property(self, "position", center, 0.6).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
+	transition.tween_property(camera, "size", distance, 0.6).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
 
 func reset_view() -> void:
 	if transition and transition.is_running():
@@ -38,7 +42,7 @@ func reset_view() -> void:
 func zoom(amount: float) -> void:
 	if transition and transition.is_running():
 		transition.kill()
-	camera.size = clampf(camera.size + amount, 9.0, 25.0)
+	camera.size = clampf(camera.size + amount, 9.0, 32.0)
 
 func pan(delta: Vector2) -> void:
 	if transition and transition.is_running():
@@ -49,8 +53,8 @@ func pan(delta: Vector2) -> void:
 	forward.y = 0
 	var ratio = camera.size / get_viewport().get_visible_rect().size.y
 	position += (-right.normalized() * delta.x - forward.normalized() * delta.y) * ratio
-	position.x = clampf(position.x, -7, 7)
-	position.z = clampf(position.z, -7, 7)
+	position.x = clampf(position.x, pan_bounds.position.x, pan_bounds.end.x)
+	position.z = clampf(position.z, pan_bounds.position.y, pan_bounds.end.y)
 
 func _unhandled_input(event: InputEvent) -> void:
 	# GUI buttons need mouse emulation; the world uses raw touches to avoid duplicate taps.
